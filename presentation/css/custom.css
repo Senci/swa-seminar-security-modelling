@@ -1,0 +1,42 @@
+ib {
+	font-family: "Book Antiqua";
+	font-size: 95%;
+	font-weight: bold;
+	font-style: italic;
+}
+
+.ib {
+	font-family: "Book Antiqua";
+	font-size: 95%;
+	font-weight: bold;
+	font-style: italic;
+}
+
+math {
+	/*font-family: "Book Antiqua";*/
+	font-style: italic;
+	/*font-size: 95%;*/
+}
+
+/*math *.reveal {
+	font-family: "Book Antiqua";
+	font-size: 95%;
+}*/
+
+.reveal .indent {
+	padding-left:50px;
+}
+
+.reveal sub {
+	font-size: 70%;
+	vertical-align: sub;
+}
+
+.reveal sup {
+	font-size: 70%;
+	vertical-align: super;
+}
+
+.reveal td {
+	vertical-align:top;
+}
