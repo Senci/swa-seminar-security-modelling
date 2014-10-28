@@ -1,0 +1,114 @@
+% v2-acmtog-sample.tex, dated March 7 2012
+% This is a sample file for ACM Transactions on Graphics
+%
+% Compilation using 'acmtog.cls' - version 1.2 (March 2012), Aptara Inc.
+% (c) 2010 Association for Computing Machinery (ACM)
+%
+% Questions/Suggestions/Feedback should be addressed to => "acmtexsupport@aptaracorp.com".
+% Users can also go through the FAQs available on the journal's submission webpage.
+%
+% Steps to compile: latex, bibtex, latex latex
+%
+% For tracking purposes => this is v1.2 - March 2012
+\documentclass{acmtog} % V1.2
+\usepackage[utf8]{inputenc} % Unicode funktioniert unter Windows, Linux und Mac
+\usepackage[T1]{fontenc}
+% \usepackage{hyperref} % Hyperref funktioniert leider nicht richtig mit bibitem
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage[scaled]{helvet}
+\usepackage{rotating}
+\usepackage[T1]{fontenc}
+\usepackage{color}
+\usepackage{cclicenses}
+
+%\acmVolume{VV}
+%\acmNumber{N}
+%\acmYear{YYYY}
+%\acmMonth{Month}
+%\acmArticleNum{XXX}
+%\acmdoi{10.1145/XXXXXXX.YYYYYYY}
+
+\acmVolume{28}
+\acmNumber{4}
+\acmYear{2009}
+\acmMonth{September}
+\acmArticleNum{106}
+\acmdoi{10.1145/1559755.1559763}
+
+\begin{document}
+
+\markboth{Shahin Imanverdiyev \& Senad Ličina}{Modelling and Conception for Security in Software}
+
+% @shahin: this title is not very good, lets find a better one. our topic is "Modellierung und Entwurf für Security"
+\title{Modelling and conception of software in aspect to security} % title
+
+\author{
+% \includegraphics[width=3.5em]{img/uhh}
+\parbox{4.2em}{\includegraphics[width=3.5em]{img/uhh}}%
+\parbox{\textwidth}{
+Seminar: Software Architecture \\
+Universität Hamburg \\
+Shahin Imanverdiyev \& Senad Ličina
+}
+}
+
+%\category{I.3.7}{Computer Graphics}{Three-Dimensional Graphics and Realism}[Animation]
+
+%\terms{Experimentation, Human Factors}
+
+%\keywords{Face animation, image-based modelling, iris animation, photorealism, physiologically-based modelling}
+
+\maketitle
+
+\begin{bottomstuff}
+\today
+% Senad Ličina $\bullet$ Seminar: Bio-Inspired Artificial Intelligence $\bullet$ Winter Term 2013/2014
+\end{bottomstuff}
+
+\begin{abstract}
+%\textcolor{red}{\textbf{DRAFT:} This paper is still under construction!}
+\begin{center}
+ABSTRACT
+\end{center}
+% put abstract here.
+put Abstract here.
+\end{abstract}
+
+\section{Introduction}
+% put introduction here
+
+put introduction here. 
+Blabla.
+Citation goes like this... \cite{SHRB11}
+footnotes \footnote{this is a footnote.} are possible aswell.
+
+Reference to Section \ref{sec:blank}.
+
+\section{A section}
+\label{sec:blank}
+intentionally left blank.
+
+\subsection{Time-of-flight}
+
+Look a figure (Figure \ref{fig:figure}).
+\begin{figure}[ht]
+\centerline{\includegraphics[width=4.5cm]{img/uhh}}
+\caption{With Caption.}
+    \label{fig:figure}
+\end{figure}
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+Typical Conclusion.
+
+\section{References}
+\renewcommand{\section}[2]{}
+\begin{raggedright}%schaltet Blocksatz ab, erzeugt ein stimmigeres Schriftbild im Literaturverzeichnis
+\begin{thebibliography}{X}
+    \bibitem[SHRB11]{SHRB11} Matthias Straka, Stefan Hauswiesner, Matthias Rüther, Horst Bischof: Skeletal Graph Based Human Pose Estimation in Real-Time. Graz University of Technology, Austria 2011.
+\end{thebibliography}
+\end{raggedright}
+
+\end{document}
