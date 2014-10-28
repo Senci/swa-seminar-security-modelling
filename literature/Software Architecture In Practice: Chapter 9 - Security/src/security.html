@@ -1,0 +1,572 @@
+<meta charset="utf-8">
+
+<link rel="stylesheet" type="text/css" href="style.css">
+<div id="HtmlView">
+	<div>
+		<div class="htmlcontent">
+			<h2 id="ch09_ch09">
+				<a id="page_147"></a>
+				9. Security
+			</h2>
+			<p class="epub__indent"> <strong><em><a name="With Jungwoo"></a>
+						With Jungwoo Ryoo and Phil Laplante</em></strong> 
+			</p>
+			<div class="epub__attri">
+				<p class="epub__blockquote"> <em><a name="worth quite"></a>
+						Your personal identity isn’t worth quite as much as it used to be&mdash;at least to thieves willing to swipe it. According to experts who monitor such markets, the value of stolen credit card data may range from $3 to as little as 40 cents. That’s down tenfold from a decade ago&mdash;even though the cost to an individual who has a credit card stolen can soar into the hundreds of dollars.</em> 
+				</p>
+				<p class="epub__attribution1">
+					&mdash;Forbes.com (Taylor Buley. “Hackonomics,” Forbes.com, October 27, 2008,
+					<a target="_new" href="http://www.forbes.com/2008/10/25/credit-card-theft-tech-security-cz_tb1024theft.html">
+						www.forbes.com/2008/10/25/credit-card-theft-tech-security-cz_tb1024theft.html
+					</a>
+					)
+				</p>
+
+			</div>
+			<p class="epub__noindent">
+				<a name="a measure"></a>
+				Security is a measure of the system’s ability to protect data and information from unauthorized access while still providing access to people and systems that are authorized. An action taken against a computer system with the intention of doing harm is called an attack and can take a number of forms. It may be an unauthorized attempt to access data or services or to modify data, or it may be intended to deny services to legitimate users.
+			</p>
+			<p class="epub__indent">
+				<a name="simplest approach"></a>
+				The simplest approach to characterizing security has three characteristics: confidentiality, integrity, and availability (CIA):
+			</p>
+			<p class="epub__indenthangingN"> <strong>1.</strong>
+				<em>Confidentiality</em>
+				<a name="services are"></a>
+				is the property that data or services are protected from unauthorized access. For example, a hacker cannot access your income tax returns on a government computer.
+			</p>
+			<p class="epub__indenthangingN">
+				<strong>2.</strong>
+				<em>Integrity</em>
+				<a name="not subject"></a>
+				is the property that data or services are not subject to unauthorized manipulation. For example, your grade has not been changed since your instructor assigned it.
+			</p>
+			<p class="epub__indenthangingN">
+				<strong>3.</strong>
+				<em>Availability</em>
+				<a name="system will"></a>
+				is the property that the system will be available for legitimate use. For example, a denial-of-service attack won’t prevent you from ordering book from an online bookstore.
+			</p>
+			<p class="epub__noindent">
+				<a id="page_148"></a>
+				<a name="characteristics that"></a>
+				Other characteristics that are used to support CIA are these:
+			</p>
+			<p class="epub__indenthangingN">
+				<strong>4.</strong>
+				<em>Authentication</em>
+				<a name="a transaction"></a>
+				verifies the identities of the parties to a transaction and checks if they are truly who they claim to be. For example, when you get an email purporting to come from a bank, authentication guarantees that it actually comes from the bank.
+			</p>
+			<p class="epub__indenthangingN">
+				<strong>5.</strong>
+				<em>Nonrepudiation</em>
+				<a name="a message"></a>
+				guarantees that the sender of a message cannot later deny having sent the message, and that the recipient cannot deny having received the message. For example, you cannot deny ordering something from the Internet, or the merchant cannot disclaim getting your order.
+			</p>
+			<p class="epub__indenthangingN">
+				<strong>6.</strong>
+				<em>Authorization</em>
+				<a name="grants a"></a>
+				grants a user the privileges to perform a task. For example, an online banking system authorizes a legitimate user to access his account.
+			</p>
+			<p class="epub__noindent">
+				<a name="these characteristics"></a>
+				We will use these characteristics in our general scenarios for security. Approaches to achieving security can be characterized as those that detect attacks, those that resist attacks, those that react to attacks, and those that recover from successful attacks. The objects that are being protected from attacks are data at rest, data in transit, and computational processes.
+			</p>
+			<input type="hidden" id="Reader_CurrentXmlId" name="__Reader_CurrentXmlId" value="9780132942799/ch09">
+			<input type="hidden" id="Reader_PreviousXmlId" name="__Reader_PreviousXmlId" value="9780132942799/ch08lev1sec6">
+			<input type="hidden" id="Reader_NextXmlId" name="__Reader_NextXmlId" value="9780132942799/ch09lev1sec1">
+			<input type="hidden" id="Reader_IndexPage" name="__Reader_IndexPage" value="">
+			<input type="hidden" id="Reader_PreviousIndex" name="__Reader_PreviousIndex" value="">
+			<input type="hidden" id="Reader_NextIndex" name="__Reader_NextIndex" value="">
+			<input type="hidden" id="Reader_Query" name="__Reader_Query" value=""></div>
+	</div>
+
+	<div>
+		<h3 id="ch09lev1sec1">9.1. Security General Scenario</h3>
+		<p class="epub__noindent">
+			<a name="One technique"></a>
+			One technique that is used in the security domain is threat modeling. An “attack tree,” similar to a fault tree discussed in
+			<a data-book="1" data-ajax="1" href="/9780132942799/ch05#ch05_ch05">Chapter 5</a>
+			<a name="security engineers"></a>
+			, is used by security engineers to determine possible threats. The root is a successful attack and the nodes are possible direct causes of that successful attack. Children nodes decompose the direct causes, and so forth. An attack is an attempt to break CIA, and the leaves of attack trees would be the stimulus in the scenario. The response to the attack is to preserve CIA or deter attackers through monitoring of their activities. From these considerations we can now describe the individual portions of a security general scenario. These are summarized in
+			<a data-book="1" data-ajax="1" href="/9780132942799/ch09lev1sec1#ch09tab01">Table 9.1</a>
+			<a name="example security"></a>
+			, and an example security scenario is given in
+			<a data-book="1" data-ajax="1" href="/9780132942799/ch09lev1sec1#ch09fig01">Figure 9.1</a>
+			.
+		</p>
+		<p class="epub__tab-caption">
+			<a id="ch09tab01"></a>
+			<a name="Security General"></a>
+			Table 9.1. Security General Scenario
+		</p>
+		<div class="epub__image">
+			<img alt="Image" src="img/0.jpe"></div>
+		<div class="epub__image">
+			<img alt="Image" src="img/1.jpe"></div>
+		<div class="epub__image">
+			<a id="ch09fig01"></a>
+			<img alt="Image" src="img/2.jpe"></div>
+		<p class="epub__fig-caption">Figure 9.1. Sample concrete security scenario</p>
+		<p class="epub__indenthangingB">
+			•
+			<em>Source of stimulus</em>
+			<a name="be either"></a>
+			. The source of the attack may be either a human or another system. It may have been previously identified (either correctly or incorrectly) or may be currently unknown. A human attacker may be from outside the organization or from inside the organization.
+		</p>
+		<p class="epub__indenthangingB">
+			•
+			<em>Stimulus.</em>
+			<a name="an unauthorized"></a>
+			The stimulus is an attack. We characterize this as an unauthorized attempt to display data, change or delete data, access system services, change the system’s behavior, or reduce availability.
+		</p>
+		<p class="epub__indenthangingB">
+			•
+			<em>Artifact</em>
+			<a name="can be"></a>
+			. The target of the attack can be either the services of the system, the data within it, or the data produced or consumed by the system. Some attacks are made on particular components of the system known to be vulnerable.
+		</p>
+		<p class="epub__indenthangingB">
+			<a id="page_149"></a>
+			•
+			<em>Environment</em>
+			<a name="attack can"></a>
+			. The attack can come when the system is either online or offline, either connected to or disconnected from a network, either behind a firewall or open to a network, fully operational, partially operational, or not operational.
+		</p>
+		<p class="epub__indenthangingB">
+			•
+			<em>Response.</em>
+			<a name="carried out"></a>
+			The system should ensure that transactions are carried out in a fashion such that data or services are protected from unauthorized access; data or services are not being manipulated without authorization; parties to a transaction are identified with assurance; the parties to the transaction cannot repudiate their involvements; and the data, resources, and system services will be available for legitimate use.
+		</p>
+		<p class="epub__indenthangingBP1">
+			<a name="activities within"></a>
+			The system should also track activities within it by recording access or modification; attempts to access data, resources, or services; and notifying appropriate entities (people or systems) when an apparent attack is occurring.
+		</p>
+		<p class="epub__indenthangingB">
+			•
+			<em>
+				<a name="Response measure"></a>
+				Response measure
+			</em>
+			<a name="response include"></a>
+			. Measures of a system’s response include how much of a system is compromised when a particular component or data value is compromised, how much time passed before an attack was detected, how many attacks were resisted, how long it took to recover from a successful attack, and how much data was vulnerable to a particular attack.
+		</p>
+		<p class="epub__indent">
+			<a data-book="1" data-ajax="1" href="/9780132942799/ch09lev1sec1#ch09tab01">Table 9.1</a>
+			<a name="elements of"></a>
+			enumerates the elements of the general scenario, which characterize security, and
+			<a data-book="1" data-ajax="1" href="/9780132942799/ch09lev1sec1#ch09fig01">Figure 9.1</a>
+			<a name="a sample"></a>
+			shows a sample concrete scenario: A disgruntled employee from a remote location attempts to modify the pay rate table during normal operations. The system maintains an audit trail, and the correct data is restored within a day.
+		</p>
+
+	</div>
+
+	<div>
+		<h3 id="ch09lev1sec2">
+			<a id="page_150"></a>
+			9.2. Tactics for Security
+		</h3>
+		<p class="epub__noindent">
+			<a name="One method"></a>
+			One method for thinking about how to achieve security in a system is to think about physical security. Secure installations have limited access (e.g., by using security checkpoints), have means of detecting intruders (e.g., by requiring legitimate visitors to wear badges), have deterrence mechanisms such as armed guards, have reaction mechanisms such as automatic locking of doors, and have recovery mechanisms such as off-site backup. These lead to our four categories of tactics: detect, resist, react, and recover.
+			<a data-book="1" data-ajax="1" href="/9780132942799/ch09lev1sec2#ch09fig02">Figure 9.2</a>
+			<a name="as the"></a>
+			shows these categories as the goal of security tactics.
+		</p>
+		<div class="epub__image">
+			<a id="page_151"></a>
+			<a id="ch09fig02"></a>
+			<img alt="Image" src="img/3.jpe"></div>
+		<p class="epub__fig-caption">
+			<a name="goal of"></a>
+			Figure 9.2. The goal of security tactics
+		</p>
+		<h4 id="ch09lev2sec1">Detect Attacks</h4>
+		<p class="epub__noindent">
+			<a name="detect attacks"></a>
+			The detect attacks category consists of four tactics: detect intrusion, detect service denial, verify message integrity, and detect message delay.
+		</p>
+		<p class="epub__indenthangingB">
+			•
+			<em>Detect intrusion</em>
+			<a name="or service"></a>
+			is the comparison of network traffic or service request patterns
+			<em>within</em>
+			<a name="known patterns"></a>
+			a system to a set of signatures or known patterns of malicious behavior stored in a database. The signatures can be based on protocol, TCP flags, payload sizes, applications, source or destination address, or port number.
+		</p>
+		<p class="epub__indenthangingB">
+			•
+			<em>Detect service denial</em>
+			<a name="pattern or"></a>
+			is the comparison of the pattern or signature of network traffic
+			<em>coming into</em>
+			<a name="system to"></a>
+			a system to historic profiles of known denial-of-service attacks.
+		</p>
+		<p class="epub__indenthangingB">
+			•
+			<em>Verify message integrity.</em>
+			<a name="or hash"></a>
+			This tactic employs techniques such as checksums or hash values to verify the integrity of messages, resource files, deployment files, and configuration files. A checksum is a validation mechanism wherein the system maintains redundant information for configuration files and messages, and uses this redundant information to verify the configuration file or message when it is used. A hash value is a unique string generated by a hashing function whose input could be configuration files or messages. Even a slight change in the original files or messages results in a significant change in the hash value.
+		</p>
+		<p class="epub__indenthangingB">
+			•
+			<em>Detect message delay</em>
+			<a name="where a"></a>
+			is intended to detect potential man-in-the-middle attacks, where a malicious party is intercepting (and possibly modifying) messages. By checking the time that it takes to deliver a message, it is possible to detect suspicious timing behavior, where the time it takes to deliver a message is highly variable.
+		</p>
+		<h4 id="ch09lev2sec2">
+			<a id="page_152"></a>
+			Resist Attacks
+		</h4>
+		<p class="epub__noindent">
+			<a name="There are"></a>
+			There are a number of well-known means of resisting an attack:
+		</p>
+		<p class="epub__indenthangingB">
+			•
+			<em>Identify actors</em>
+			<a name="about identifying"></a>
+			. Identifying “actors” is really about identifying the source of any external input to the system. Users are typically identified through user IDs. Other systems may be “identified” through access codes, IP addresses, protocols, ports, and so on.
+		</p>
+		<p class="epub__indenthangingB">
+			•
+			<em>Authenticate actors</em>
+			<a name="ensuring that"></a>
+			. Authentication means ensuring that an actor (a user or a remote computer) is actually who or what it purports to be. Passwords, one-time passwords, digital certificates, and biometric identification provide a means for authentication.
+		</p>
+		<p class="epub__indenthangingB">
+			•
+			<em>Authorize actors</em>
+			<a name="means ensuring"></a>
+			. Authorization means ensuring that an authenticated actor has the rights to access and modify either data or services. This mechanism is usually enabled by providing some access control mechanisms within a system. Access control can be by an actor or by an actor class. Classes of actors can be defined by actor groups, by actor roles, or by lists of individuals.
+		</p>
+		<p class="epub__indenthangingB">
+			•
+			<em>Limit access</em>
+			<a name="limiting access"></a>
+			. Limiting access to computing resources involves limiting access to resources such as memory, network connections, or access points. This may be achieved by using memory protection, blocking a host, closing a port, or rejecting a protocol. For example, a demilitarized zone (DMZ) is used when an organization wants to let external users access certain services and not access other services. It sits between the Internet and a firewall in front of the internal intranet. The firewall is a single point of access to the intranet (limit exposure). It also restricts access using a variety of techniques to authorize users (authorize actors).
+		</p>
+		<p class="epub__indenthangingB">
+			•
+			<em>Limit exposure.</em>
+			<a name="of a"></a>
+			The limit exposure tactic minimizes the attack surface of a system. This tactic focuses on reducing the probability of and minimizing the effects of damage caused by a hostile action. It is a passive defense because it does not proactively prevent attackers from doing harm. Limit exposure is typically realized by having the least possible number of access points for resources, data, or services and by reducing the number of connectors that may provide unanticipated exposure.
+		</p>
+		<p class="epub__indenthangingB">
+			•
+			<em>Encrypt data</em>
+			<a name="unauthorized access"></a>
+			. Data should be protected from unauthorized access. Confidentiality is usually achieved by applying some form of encryption to data and to communication. Encryption provides extra protection to persistently maintained data beyond that available from authorization. Communication links, on the other hand, may not have authorization controls. In such cases, encryption is the only protection for passing data over publicly accessible communication links. The link can be implemented by a virtual private network (VPN) or by a Secure Sockets Layer (SSL) for a web-based link. Encryption can be symmetric (both parties use the same key) or asymmetric (public and private keys).
+		</p>
+		<p class="epub__indenthangingB">
+			<a id="page_153"></a>
+			•
+			<em>Separate entities</em>
+			<a name="different entities"></a>
+			. Separating different entities within the system can be done through physical separation on different servers that are attached to different networks; the use of virtual machines (see
+			<a data-book="1" data-ajax="1" href="/9780132942799/ch26#ch26_ch26">Chapter 26</a>
+			<a name="that is"></a>
+			for a discussion of virtual machines); or an “air gap,” that is, by having no connection between different portions of a system. Finally, sensitive data is frequently separated from nonsensitive data to reduce the attack possibilities from those who have access to nonsensitive data.
+		</p>
+		<p class="epub__indenthangingB">
+			•
+			<em>Change default settings</em>
+			<a name="assigned when"></a>
+			. Many systems have default settings assigned when the system is delivered. Forcing the user to change those settings will prevent attackers from gaining access to the system through settings that are, generally, publicly available.
+		</p>
+		<h4 id="ch09lev2sec3">React to Attacks</h4>
+		<p class="epub__noindent">
+			<a name="Several tactics"></a>
+			Several tactics are intended to respond to a potential attack:
+		</p>
+		<p class="epub__indenthangingB">
+			•
+			<em>Revoke access.</em>
+			<a name="or a"></a>
+			If the system or a system administrator believes that an attack is underway, then access can be severely limited to sensitive resources, even for normally legitimate users and uses. For example, if your desktop has been compromised by a virus, your access to certain resources may be limited until the virus is removed from your system.
+		</p>
+		<p class="epub__indenthangingB">
+			•
+			<em>Lock computer</em>
+			<a name="login attempts"></a>
+			. Repeated failed login attempts may indicate a potential attack. Many systems limit access from a particular computer if there are repeated failed attempts to access an account from that computer. Legitimate users may make mistakes in attempting to log in. Therefore, the limited access may only be for a certain time period.
+		</p>
+		<p class="epub__indenthangingB">
+			•
+			<em>Inform actors</em>
+			<a name="attacks may"></a>
+			. Ongoing attacks may require action by operators, other personnel, or cooperating systems. Such personnel or systems&mdash;the set of relevant actors&mdash;must be notified when the system has detected an attack.
+		</p>
+		<h4 id="ch09lev2sec4">Recover from Attacks</h4>
+		<p class="epub__noindent">
+			<a name="attempted to"></a>
+			Once a system has detected and attempted to resist an attack, it needs to recover. Part of recovery is restoration of services. For example, additional servers or network connections may be kept in reserve for such a purpose. Since a successful attack can be considered a kind of failure, the set of availability tactics (from
+			<a data-book="1" data-ajax="1" href="/9780132942799/ch05#ch05_ch05">Chapter 5</a>
+			<a name="be brought"></a>
+			) that deal with recovering from a failure can be brought to bear for this aspect of security as well.
+		</p>
+		<p class="epub__indent">
+			<a name="tactics that"></a>
+			In addition to the availability tactics that permit restoration of services, we need to maintain an audit trail. We audit&mdash;that is, keep a record of user and system actions and their effects&mdash;to help trace the actions of, and to identify, an attacker. We may analyze audit trails to attempt to prosecute attackers, or to create better defenses in the future.
+		</p>
+		<p class="epub__indent">
+			<a name="set of"></a>
+			The set of security tactics is shown in
+			<a data-book="1" data-ajax="1" href="/9780132942799/ch09lev1sec2#ch09fig03">Figure 9.3</a>
+			.
+		</p>
+		<div class="epub__image">
+			<a id="page_154"></a>
+			<a id="ch09fig03"></a>
+			<img alt="Image" src="img/4.jpe"></div>
+		<p class="epub__fig-caption">Figure 9.3. Security tactics</p>
+
+	</div>
+
+	<div>
+		<div class="htmlcontent">
+			<div>
+				<h3 id="ch09lev1sec3">9.3. A Design Checklist for Security</h3>
+				<p class="epub__noindent">
+					<a data-book="1" data-ajax="1" href="/9780132942799/ch09lev1sec3#ch09tab02">Table 9.2</a>
+					<a name="is a"></a>
+					is a checklist to support the design and analysis process for security.
+				</p>
+				<p class="epub__tab-caption">
+					<a id="ch09tab02"></a>
+					<a name="Support the"></a>
+					Table 9.2. Checklist to Support the Design and Analysis Process for Security
+				</p>
+				<div class="epub__image">
+					<img alt="Image" src="img/5.jpe"></div>
+				<div class="epub__image">
+					<a id="page_155"></a>
+					<img alt="Image" src="img/6.jpe"></div>
+				<div class="epub__image">
+					<img alt="Image" src="img/7.jpe"></div>
+
+				<p></p>
+			</div>
+			<input type="hidden" id="Reader_CurrentXmlId" name="__Reader_CurrentXmlId" value="9780132942799/ch09lev1sec3">
+			<input type="hidden" id="Reader_PreviousXmlId" name="__Reader_PreviousXmlId" value="9780132942799/ch09lev1sec2">
+			<input type="hidden" id="Reader_NextXmlId" name="__Reader_NextXmlId" value="9780132942799/ch09lev1sec4">
+			<input type="hidden" id="Reader_IndexPage" name="__Reader_IndexPage" value="">
+			<input type="hidden" id="Reader_PreviousIndex" name="__Reader_PreviousIndex" value="">
+			<input type="hidden" id="Reader_NextIndex" name="__Reader_NextIndex" value="">
+			<input type="hidden" id="Reader_Query" name="__Reader_Query" value=""></div>
+	</div>
+
+	<div>
+		<div class="htmlcontent">
+			<div>
+				<h3 id="ch09lev1sec4">
+					<a id="page_156"></a>
+					9.4. Summary
+				</h3>
+				<p class="epub__noindent">
+					<a name="Attacks against"></a>
+					Attacks against a system can be characterized as attacks against the confidentiality, integrity, or availability of a system or its data. Confidentiality means keeping data away from those who should not have access while granting access to those who should. Integrity means that there are no unauthorized modifications to or deletion of data, and availability means that the system is accessible to those who are entitled to use it.
+				</p>
+				<p class="epub__indent">
+					<a name="distinguishing various"></a>
+					The emphasis of distinguishing various classes of actors in the characterization leads to many of the tactics used to achieve security. Identifying, authenticating, and authorizing actors are tactics intended to determine which users or systems are entitled to what kind of access to a system.
+				</p>
+				<p class="epub__indent">
+					<a name="is made"></a>
+					An assumption is made that no security tactic is foolproof and that systems will be compromised. Hence, tactics exist to detect an attack, limit the spread of any attack, and to react and recover from an attack.
+				</p>
+				<p class="epub__indent">
+					<a name="from an"></a>
+					Recovering from an attack involves many of the same tactics as availability and, in general, involves returning the system to a consistent state prior to any attack.
+				</p>
+
+				<p></p>
+			</div>
+			<input type="hidden" id="Reader_CurrentXmlId" name="__Reader_CurrentXmlId" value="9780132942799/ch09lev1sec4">
+			<input type="hidden" id="Reader_PreviousXmlId" name="__Reader_PreviousXmlId" value="9780132942799/ch09lev1sec3">
+			<input type="hidden" id="Reader_NextXmlId" name="__Reader_NextXmlId" value="9780132942799/ch09lev1sec5">
+			<input type="hidden" id="Reader_IndexPage" name="__Reader_IndexPage" value="">
+			<input type="hidden" id="Reader_PreviousIndex" name="__Reader_PreviousIndex" value="">
+			<input type="hidden" id="Reader_NextIndex" name="__Reader_NextIndex" value="">
+			<input type="hidden" id="Reader_Query" name="__Reader_Query" value=""></div>
+	</div>
+
+	<div>
+		<div class="htmlcontent">
+			<div>
+				<h3 id="ch09lev1sec5">
+					<a id="page_157"></a>
+					9.5. For Further Reading
+				</h3>
+				<p class="epub__noindent">
+					<a name="The architectural"></a>
+					The architectural tactics that we have described in this chapter are only one aspect of making a system secure. Other aspects are these:
+				</p>
+				<p class="epub__indenthangingB">
+					•
+					<em>
+						<a name="C and"></a>
+						Coding. Secure Coding in C and C++
+					</em>
+					<a data-book="1" data-ajax="1" href="/9780132942799/app01#bib01_172">[Seacord 05]</a>
+					<a name="to code"></a>
+					describes how to code securely. The Common Weakness Enumeration
+					<a data-book="1" data-ajax="1" href="/9780132942799/app01#bib01_058">[CWE 12]</a>
+					<a name="a list"></a>
+					is a list of the most common vulnerabilities discovered in systems.
+				</p>
+				<p class="epub__indenthangingB">
+					•
+					<em>Organizational processes.</em>
+					<a name="for responsibility"></a>
+					Organizations must have processes that provide for responsibility for various aspects of security, including ensuring that systems are patched to put into place the latest protections. The National Institute of Standards and Technology (NIST) provides an enumeration of organizational processes
+					<a data-book="1" data-ajax="1" href="/9780132942799/app01#bib01_147">[NIST 09]</a>
+					.
+					<a data-book="1" data-ajax="1" href="/9780132942799/app01#bib01_041">[Cappelli 12]</a>
+					discusses insider threats.
+				</p>
+				<p class="epub__indenthangingB">
+					•
+					<em>Technical processes.</em>
+					<a name="that includes"></a>
+					Microsoft has a life-cycle development process (The Secure Development Life Cycle) that includes modeling of threats. Four training classes are publicly available.
+					<a target="_new" href="http://www.microsoft.com/download/en/details.aspx?id=16420">www.microsoft.com/download/en/details.aspx?id=16420</a>
+				</p>
+				<p class="epub__indent">
+					<a name="give definitions"></a>
+					NIST has several volumes that give definitions of security terms
+					<a data-book="1" data-ajax="1" href="/9780132942799/app01#bib01_145">[NIST 04]</a>
+					<a name="of security"></a>
+					, categories of security controls
+					<a data-book="1" data-ajax="1" href="/9780132942799/app01#bib01_146">[NIST 06]</a>
+					<a name="an organization"></a>
+					, and an enumeration of security controls that an organization could employ
+					<a data-book="1" data-ajax="1" href="/9780132942799/app01#bib01_147">[NIST 09]</a>
+					<a name="a tactic"></a>
+					. A security control could be a tactic, but it could also be organizational, coding-related, or a technical process.
+				</p>
+				<p class="epub__indent">
+					<a name="The attack"></a>
+					The attack surface of a system is the code that can be run by unauthorized users. A discussion of how to minimize the attack surface for a system can be found at
+					<a data-book="1" data-ajax="1" href="/9780132942799/app01#bib01_091">[Howard 04]</a>
+					.
+				</p>
+				<p class="epub__indent">
+					<a name="of various"></a>
+					Encryption and certificates of various types and strengths are commonly used to resist certain types of attacks. Encryption algorithms are particularly difficult to code correctly. A document produced by NIST
+					<a data-book="1" data-ajax="1" href="/9780132942799/app01#bib01_144">[NIST 02]</a>
+					<a name="for these"></a>
+					gives requirements for these algorithms.
+				</p>
+				<p class="epub__indent">
+					<a name="books on"></a>
+					Good books on engineering systems for security have been written by Ross Anderson
+					<a data-book="1" data-ajax="1" href="/9780132942799/app01#bib01_004">[Anderson 08]</a>
+					and Bruce Schneier
+					<a data-book="1" data-ajax="1" href="/9780132942799/app01#bib01_169">[Schneier 08]</a>
+					.
+				</p>
+				<p class="epub__indent">
+					<a name="of practices"></a>
+					Different domains have different specific sets of practices. The Payment Card Industry (PCI) has a set of standards intended for those involved in credit card processing (
+					<a target="_new" href="http://www.pcisecuritystandards.org">www.pcisecuritystandards.org</a>
+					<a name="securing various"></a>
+					). There is also a set of recommendations for securing various portions of the electric grid (
+					<a target="_new" href="http://www.smartgridipedia.org/index.php/ASAP-SG">www.smartgridipedia.org/index.php/ASAP-SG</a>
+					).
+				</p>
+				<p class="epub__indent">
+					<a name="of data"></a>
+					Data on the various sources of data breaches can be found in the Verizon 2012 Data Breach Investigations Report
+					<a data-book="1" data-ajax="1" href="/9780132942799/app01#bib01_191">[Verizon 12]</a>
+					.
+				</p>
+				<p class="epub__indent">
+					<a name="Viega has"></a>
+					John Viega has written several books about secure software development in various environments. See, for example,
+					<a data-book="1" data-ajax="1" href="/9780132942799/app01#bib01_194">[Viega 01]</a>
+					.
+				</p>
+
+				<p></p>
+			</div>
+			<input type="hidden" id="Reader_CurrentXmlId" name="__Reader_CurrentXmlId" value="9780132942799/ch09lev1sec5">
+			<input type="hidden" id="Reader_PreviousXmlId" name="__Reader_PreviousXmlId" value="9780132942799/ch09lev1sec4">
+			<input type="hidden" id="Reader_NextXmlId" name="__Reader_NextXmlId" value="9780132942799/ch09lev1sec6">
+			<input type="hidden" id="Reader_IndexPage" name="__Reader_IndexPage" value="">
+			<input type="hidden" id="Reader_PreviousIndex" name="__Reader_PreviousIndex" value="">
+			<input type="hidden" id="Reader_NextIndex" name="__Reader_NextIndex" value="">
+			<input type="hidden" id="Reader_Query" name="__Reader_Query" value=""></div>
+	</div>
+
+	<div>
+		<div class="htmlcontent">
+			<div>
+				<h3 id="ch09lev1sec6">
+					<a id="page_158"></a>
+					9.6. Discussion Questions
+				</h3>
+				<p class="epub__question">
+					<strong>1.</strong>
+					<a name="Write a"></a>
+					Write a set of concrete scenarios for security for an automatic teller machine. How would you modify your design for the automatic teller machine to satisfy these scenarios?
+				</p>
+				<p class="epub__question">
+					<strong>2.</strong>
+					<a name="most sophisticated"></a>
+					One of the most sophisticated attacks on record was carried out by a virus known as Stuxnet. Stuxnet first appeared in 2009 but became widely known in 2011 when it was revealed that it had apparently severely damaged or incapacitated the high-speed centrifuges involved in Iran’s uranium enrichment program. Read about Stuxnet and see if you can devise a defense strategy against it based on the tactics in this chapter.
+				</p>
+				<p class="epub__question">
+					<strong>3.</strong>
+					<a name="that inserting"></a>
+					Some say that inserting security awareness into the software development life cycle is at least as important as designing software with security countermeasures. What are some examples of software development processes that can lead to more-secure systems?
+				</p>
+				<p class="epub__question">
+					<strong>4.</strong>
+					<a name="and usability"></a>
+					Security and usability are often seen to be at odds with each other. Security often imposes procedures and processes that seem like needless overhead to the casual user. But some say that security and usability go (or should go) hand in hand and argue that making the system easy to use securely is the best way to promote security to the user. Discuss.
+				</p>
+				<p class="epub__question">
+					<strong>5.</strong>
+					<a name="for security"></a>
+					List some examples of critical resources for security that might become exhausted.
+				</p>
+				<p class="epub__question">
+					<strong>6.</strong>
+					<a name="elements that"></a>
+					List an example of a mapping of architectural elements that has strong security implications. Hint: think of where data is stored.
+				</p>
+				<p class="epub__question">
+					<strong>7.</strong>
+					<a name="our list"></a>
+					Which of the tactics in our list will protect against an insider threat? Can you think of any that should be added?
+				</p>
+				<p class="epub__question">
+					<strong>8.</strong>
+					<a name="the United"></a>
+					In the United States, Facebook can account for more than 5 percent of all Internet traffic in a given week. How would you recognize a denial-of-service attack on Facebook.com?
+				</p>
+				<p class="epub__question">
+					<strong>9.</strong>
+					<a name="systems is"></a>
+					The public disclosure of vulnerabilities in production systems is a matter of controversy. Discuss why this is so and the pros and cons of public disclosure of vulnerabilities.
+				</p>
+				<p></p>
+			</div>
+			<input type="hidden" id="Reader_CurrentXmlId" name="__Reader_CurrentXmlId" value="9780132942799/ch09lev1sec6">
+			<input type="hidden" id="Reader_PreviousXmlId" name="__Reader_PreviousXmlId" value="9780132942799/ch09lev1sec5">
+			<input type="hidden" id="Reader_NextXmlId" name="__Reader_NextXmlId" value="9780132942799/ch10">
+			<input type="hidden" id="Reader_IndexPage" name="__Reader_IndexPage" value="">
+			<input type="hidden" id="Reader_PreviousIndex" name="__Reader_PreviousIndex" value="">
+			<input type="hidden" id="Reader_NextIndex" name="__Reader_NextIndex" value="">
+			<input type="hidden" id="Reader_Query" name="__Reader_Query" value=""></div>
+	</div>
+</div>

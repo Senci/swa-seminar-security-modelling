@@ -1,3 +1,3 @@
 swa-seminar-security-modelling
 ==============================
-Let's start!
+Unter literature findet sich literatur zum Thema.
