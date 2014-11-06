@@ -4,4 +4,4 @@
 ** System development has to take security aspects into account
 ** The traditional approach for security assurance has been "penetrate and patch"
 *** It is preferable to take security aspects into account in an early stage of the system development
-sdsad
+
