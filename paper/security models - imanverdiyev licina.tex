@@ -85,7 +85,7 @@ An increasing number of devices are connected to the Internet, which is why it i
 
 % Developing secure systems is difficult
 The correct development of secure software is difficult.
-There have been numerous successful attacks abusing vulnerabilities of software systems in the past and it is to expect that people will try to abuse such flaws in the future as well.
+There have been numerous successful attacks abusing vulnerabilities of software systems in the past and it can be expected that people will try to detect and abuse such flaws in the future as well.
 
 % System development has to take security aspects into account.
 The traditional approach for security assurance has been ``penetrate and patch'', where security is assured by attempting to break into a running system and exploiting well-known vulnerabilities.
@@ -126,7 +126,39 @@ These key principles are often described as incomplete and thus extended by furt
 		assures that the existence of specific actions can not be denied.
 \end{description}
 
-\section{bla}
+\subsection{Unified Modeling Language}
+
+\begin{quote}
+	``The Unified Modeling Language (UML) is a general-purpose visual modeling language that is used to specify, visualize, construct, and document the artifacts of a software system.''
+
+	\hfill -- \cite[Chapter 1]{BJR99}
+\end{quote}
+
+The Unified Modeling Language (UML) is the prevalent language for the specification of object orientated software systems.
+It describes architecture and behavior of software in a graphical manner using various diagram types.
+
+Although UML is currently available in version 2.x, we will discuss UML 1.5 in this chapter, as the security extension UMLsec (used in Section \ref{sec:umlsec}) is defined for UML 1.5.
+
+\begin{figure}[ht]
+\centerline{\includegraphics[width=7cm]{img/uml-banking/use-case-diagram}}
+\caption{Example of an use case diagram representing possible interactions between a customer and banking interfaces.}
+    \label{fig:use-case-diagram}
+\end{figure}
+
+\begin{figure}[ht]
+\centerline{\includegraphics[width=7cm]{img/uml-banking/class-diagram}}
+\caption{A class diagram representing example classes for Customer and Accounts, inheritage interfaces.}
+    \label{fig:class-diagram}
+\end{figure}
+
+\begin{figure}[ht]
+\centerline{\includegraphics[width=5cm]{img/uml-banking/statechart-diagram}}
+\caption{A statechart diagram depicting the simplified processes withdrawal and depositing on an account.}
+    \label{fig:class-diagram}
+\end{figure}
+
+\section{Modeling secure software with UML}
+\label{sec:umlsec}
 
 
 Citation goes like this... \cite{SHRB11}
@@ -156,6 +188,9 @@ Typical Conclusion.
 \renewcommand{\section}[2]{}
 \begin{raggedright}%schaltet Blocksatz ab, erzeugt ein stimmigeres Schriftbild im Literaturverzeichnis
 \begin{thebibliography}{X}
+    \bibitem[BJR99]{BJR99} Grady Booch, Ivar Jacobson, James Rumbaugh: The Unified Modeling Language Reference Manual. Addison-Wesley, Reading (US-MA) 1999.
+    \bibitem[JS11]{JS11} Jan Jürjens, Holger Schmidt: UMLsec 4 UML2 - Adopting UMLsec to Support UML2. Technische Universität Dortmund, Dortmund, Germany 2011.
+    \bibitem[Jür06]{Jür06} Jan Jürjens: Secure Systems Development with UML. Springer-Verlag, Berlin, Germany 2006.
     \bibitem[SHRB11]{SHRB11} Matthias Straka, Stefan Hauswiesner, Matthias Rüther, Horst Bischof: Skeletal Graph Based Human Pose Estimation in Real-Time. Graz University of Technology, Austria 2011.
 \end{thebibliography}
 \end{raggedright}
