@@ -73,6 +73,7 @@ ABSTRACT
 \end{center}
 % put abstract here.
 put Abstract here.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec efficitur enim. Mauris leo metus, fermentum dapibus lobortis eu, gravida at libero. Vestibulum eu sem eu sem finibus convallis nec at lectus. Donec finibus dui eget eros bibendum, sit amet pharetra odio rutrum. Etiam sodales suscipit mattis. Sed molestie sagittis rutrum. Vivamus non luctus velit, a venenatis felis. In non sem lacinia, vehicula nisi eget, elementum nibh. Curabitur faucibus est leo, vel placerat lacus dapibus eu. In ut enim a nisl facilisis viverra ut nec tellus.
 \end{abstract}
 
 \section{Introduction}
@@ -137,29 +138,56 @@ These key principles are often described as incomplete and thus extended by furt
 The Unified Modeling Language (UML) is the prevalent language for the specification of object orientated software systems.
 It describes architecture and behavior of software in a graphical manner using various diagram types.
 
-Although UML is currently available in version 2.x, we will discuss UML 1.5 in this chapter, as the security extension UMLsec (used in Section \ref{sec:umlsec}) is defined for UML 1.5.
+% Although UML is currently available in version 2.x, we will discuss UML 1.5 in this chapter, as the security extension UMLsec (used in Section \ref{sec:umlsec}) is defined for UML 1.5.
 
-\begin{figure}[ht]
-\centerline{\includegraphics[width=7cm]{img/uml-banking/use-case-diagram}}
-\caption{Example of an use case diagram representing possible interactions between a customer and banking interfaces.}
-    \label{fig:use-case-diagram}
-\end{figure}
 
-\begin{figure}[ht]
-\centerline{\includegraphics[width=7cm]{img/uml-banking/class-diagram}}
-\caption{A class diagram representing example classes for Customer and Accounts, inheritage interfaces.}
-    \label{fig:class-diagram}
-\end{figure}
+\begin{description}
+	\item[Use case diagrams] model a systems functionality as percieved by users (or actors).
+	Use case diagrams consist of use cases and actors, they can be used to represent interactions between system and user.
+	An example for a use case diagram is given with figure \ref{fig:use-case-diagram}.
+	The actors (customer, online banking \& banking system) are depicted by stick-figures, the use cases (transfer funds, deposit funds \& withdraw cash) are represented as ovals.
+	\begin{figure}[ht]
+		\centerline{\includegraphics[width=7cm]{img/uml-banking/use-case-diagram}}
+		\caption{Example of an use case diagram representing possible interactions between a customer and banking interfaces.}
+		\label{fig:use-case-diagram}
+	\end{figure}
 
-\begin{figure}[ht]
-\centerline{\includegraphics[width=5cm]{img/uml-banking/statechart-diagram}}
-\caption{A statechart diagram depicting the simplified processes withdrawal and depositing on an account.}
-    \label{fig:statechart-diagram}
-\end{figure}
+	\item[Class diagrams] model static concepts within the implementation of an application.
+	Classes are drawn as rectangles consisting of three sections for its name, its attributes and its operations.
+	Relationships among classes are drawn as paths between them, whereby different arrow types have different meanings.
+	Figure \ref{fig:class-diagram} shows a class diagram representing different implementations of the \textit{AccountInterface} and an implementation for the \textit{CustomerInterface}.
+	The classes \textit{CheckingAccount} and \textit{SavingsAccount} are inheriting from the class \textit{Account} which is implementing the \textit{AccountInterface}.
+	\begin{figure}[ht]
+		\centerline{\includegraphics[width=7cm]{img/uml-banking/class-diagram}}
+		\caption{A class diagram representing example classes for customer and accounts.}
+		\label{fig:class-diagram}
+	\end{figure}
+
+	\item[Statechart diagrams] are visual representations of state machines.
+	State machines model the sequences of states which an entity can go through.
+	States are connected by transitions, which are allowed to have conditions.
+	The initial state is depicted by a black dot, the final state as a black dot in a circle.
+	Figure \ref{fig:statechart-diagram} shows the states an account object can go through.
+	\begin{figure}[ht]
+		\centerline{\includegraphics[width=5cm]{img/uml-banking/statechart-diagram}}
+		\caption{A statechart diagram depicting the simplified processes cash withdrawal and deposition on an account.}
+		\label{fig:statechart-diagram}
+	\end{figure}
+
+	\item[Sequence diagrams] are visual representations of state machines.
+	State machines model the sequences of states which an entity can go through.
+	States are connected by transitions, which are allowed to have conditions.
+	The initial state is depicted by a black dot, the final state as a black dot in a circle.
+	Figure \ref{fig:statechart-diagram} shows the states an account object can go through.
+	\begin{figure}[ht]
+		\centerline{\includegraphics[width=9cm]{img/uml-banking/sequence-diagram}}
+		\caption{A sequence diagram describing the scenario of money withdrawal at an ATM.}
+		\label{fig:sequence-diagram}
+	\end{figure}
+\end{description}
 
 \section{Modeling secure software with UML}
 \label{sec:umlsec}
-
 
 Citation goes like this... \cite{SHRB11}
 footnotes \footnote{this is a footnote.} are possible aswell.
@@ -170,15 +198,6 @@ blabla wichtig
 
 intentionally left blank.
 
-\subsection{Time-of-flight}
-
-Look a figure (Figure \ref{fig:figure}).
-\begin{figure}[ht]
-\centerline{\includegraphics[width=4.5cm]{img/uhh}}
-\caption{With Caption.}
-    \label{fig:figure}
-\end{figure}
-
 \section{Conclusion}
 \label{sec:conclusion}
 
@@ -188,10 +207,10 @@ Typical Conclusion.
 \renewcommand{\section}[2]{}
 \begin{raggedright}%schaltet Blocksatz ab, erzeugt ein stimmigeres Schriftbild im Literaturverzeichnis
 \begin{thebibliography}{X}
-    \bibitem[BJR99]{BJR99} Grady Booch, Ivar Jacobson, James Rumbaugh: The Unified Modeling Language Reference Manual. Addison-Wesley, Reading (US-MA) 1999.
-    \bibitem[JS11]{JS11} Jan Jürjens, Holger Schmidt: UMLsec 4 UML2 - Adopting UMLsec to Support UML2. Technische Universität Dortmund, Dortmund, Germany 2011.
-    \bibitem[Jür06]{Jür06} Jan Jürjens: Secure Systems Development with UML. Springer-Verlag, Berlin, Germany 2006.
-    \bibitem[SHRB11]{SHRB11} Matthias Straka, Stefan Hauswiesner, Matthias Rüther, Horst Bischof: Skeletal Graph Based Human Pose Estimation in Real-Time. Graz University of Technology, Austria 2011.
+	\bibitem[BJR99]{BJR99} Grady Booch, Ivar Jacobson, James Rumbaugh: The Unified Modeling Language Reference Manual. Addison-Wesley, Reading (US-MA) 1999.
+	\bibitem[JS11]{JS11} Jan Jürjens, Holger Schmidt: UMLsec 4 UML2 - Adopting UMLsec to Support UML2. Technische Universität Dortmund, Dortmund, Germany 2011.
+	\bibitem[Jür06]{Jür06} Jan Jürjens: Secure Systems Development with UML. Springer-Verlag, Berlin, Germany 2006.
+	\bibitem[SHRB11]{SHRB11} Matthias Straka, Stefan Hauswiesner, Matthias Rüther, Horst Bischof: Skeletal Graph Based Human Pose Estimation in Real-Time. Graz University of Technology, Austria 2011.
 \end{thebibliography}
 \end{raggedright}
 

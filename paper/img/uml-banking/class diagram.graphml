@@ -110,7 +110,7 @@ accounts</y:AttributeLabel>
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="135.80000000000007" width="142.0" x="101.0" y="-434.5"/>
+          <y:Geometry height="109.80000000000007" width="142.0" x="101.0" y="-408.5"/>
           <y:Fill color="#FFFFFF" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="custom" textColor="#000000" visible="true" width="129.61376953125" x="6.193115234375" y="25.96875">AccountInterface<y:LabelModel>
@@ -121,8 +121,7 @@ accounts</y:AttributeLabel>
             </y:ModelParameter>
           </y:NodeLabel>
           <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="Interface" use3DEffect="false">
-            <y:AttributeLabel>accountNumber
-balance</y:AttributeLabel>
+            <y:AttributeLabel/>
             <y:MethodLabel>deposit
 getBalance
 getTransactionHistory</y:MethodLabel>
@@ -131,10 +130,9 @@ getTransactionHistory</y:MethodLabel>
       </data>
     </node>
     <node id="n5">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="10.800000000000011" width="13.200000000000045" x="250.00000000000006" y="-214.10000000000016"/>
+          <y:Geometry height="10.800000000000011" width="13.200000000000045" x="250.00000000000006" y="-373.10000000000014"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle hasColor="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.96875" modelName="custom" textColor="#000000" visible="true" width="10.0" x="1.6000000000000227" y="-3.5843749999999943">*<y:LabelModel>
@@ -149,10 +147,9 @@ getTransactionHistory</y:MethodLabel>
       </data>
     </node>
     <node id="n6">
-      <data key="d5"/>
       <data key="d6">
         <y:ShapeNode>
-          <y:Geometry height="10.800000000000011" width="13.200000000000045" x="308.60000000000014" y="-214.10000000000016"/>
+          <y:Geometry height="10.800000000000011" width="13.200000000000045" x="308.60000000000014" y="-373.10000000000014"/>
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle hasColor="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.96875" modelName="custom" textColor="#000000" visible="true" width="11.634765625" x="0.7826171875000227" y="-3.5843749999999943">1<y:LabelModel>
@@ -166,8 +163,28 @@ getTransactionHistory</y:MethodLabel>
         </y:ShapeNode>
       </data>
     </node>
+    <node id="n7">
+      <data key="d4"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="80.90000000000003" width="142.0" x="331.0" y="-394.04999999999995"/>
+          <y:Fill color="#FFFFFF" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.1328125" modelName="custom" textColor="#000000" visible="true" width="140.93798828125" x="0.531005859375" y="25.96875">CustomerInterface<y:LabelModel>
+              <y:SmartNodeLabelModel distance="4.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="-0.03703090122767855" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
+            </y:ModelParameter>
+          </y:NodeLabel>
+          <y:UML clipContent="true" constraint="" omitDetails="false" stereotype="Interface" use3DEffect="false">
+            <y:AttributeLabel>accounts</y:AttributeLabel>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
     <edge id="e0" source="n2" target="n0">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="-36.5" tx="-35.5" ty="63.5">
@@ -181,7 +198,6 @@ getTransactionHistory</y:MethodLabel>
       </data>
     </edge>
     <edge id="e1" source="n3" target="n0">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="-30.5" tx="35.5" ty="63.5">
@@ -195,23 +211,32 @@ getTransactionHistory</y:MethodLabel>
       </data>
     </edge>
     <edge id="e2" source="n0" target="n4">
-      <data key="d9"/>
       <data key="d10">
         <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="-63.5" tx="0.0" ty="67.90000000000003"/>
+          <y:Path sx="0.0" sy="-63.5" tx="0.0" ty="54.900000000000055"/>
           <y:LineStyle color="#000000" type="dashed" width="1.0"/>
           <y:Arrows source="none" target="white_delta"/>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e3" source="n1" target="n0">
-      <data key="d9"/>
+    <edge id="e3" source="n7" target="n4">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="none"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e4" source="n1" target="n7">
+      <data key="d9"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="dashed" width="1.0"/>
+          <y:Arrows source="none" target="white_delta"/>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>
