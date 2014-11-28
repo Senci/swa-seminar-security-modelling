@@ -174,14 +174,14 @@ It describes architecture and behavior of software in a graphical manner using v
 		\label{fig:statechart-diagram}
 	\end{figure}
 
-	\item[Sequence diagrams] are visual representations of state machines.
-	State machines model the sequences of states which an entity can go through.
-	States are connected by transitions, which are allowed to have conditions.
-	The initial state is depicted by a black dot, the final state as a black dot in a circle.
-	Figure \ref{fig:statechart-diagram} shows the states an account object can go through.
+	\item[Sequence diagrams] shows object interactions by arranging messages in time sequence.
+	The vertical lines are lifelines which are representing classifier roles.
+	Messages are drawn as arrows between lifelines.
+	An example sequence diagram for the scenatio where a customer is withdrawing money at an ATM is given with figure \ref{fig:sequence-diagram}.
+	Figure \ref{fig:sequence-diagram} shows an sequence diagram for the example scenario of money withdrawal at an ATM.
 	\begin{figure}[ht]
 		\centerline{\includegraphics[width=9cm]{img/uml-banking/sequence-diagram}}
-		\caption{A sequence diagram describing the scenario of money withdrawal at an ATM.}
+		\caption{Money withdrawal at an ATM as a sequence diagram.}
 		\label{fig:sequence-diagram}
 	\end{figure}
 \end{description}
