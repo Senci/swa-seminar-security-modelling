@@ -174,7 +174,10 @@ It describes architecture and behavior of software in a graphical manner using v
 		\label{fig:statechart-diagram}
 	\end{figure}
 
-	\item[Sequence diagrams] shows object interactions by arranging messages in time sequence.
+	\item[Activity diagrams] are a special case of statechart diagrams, used to model processes involving one or more components.
+	Activity diagrams make use of synchronization bars to distinguish between sequential and concurrent groups of activities.
+
+	\item[Sequence diagrams] show object interactions by arranging messages in time sequence.
 	The vertical lines are lifelines which are representing classifier roles.
 	Messages are drawn as arrows between lifelines.
 	An example sequence diagram for the scenatio where a customer is withdrawing money at an ATM is given with figure \ref{fig:sequence-diagram}.
@@ -183,6 +186,17 @@ It describes architecture and behavior of software in a graphical manner using v
 		\centerline{\includegraphics[width=9cm]{img/uml-banking/sequence-diagram}}
 		\caption{Money withdrawal at an ATM as a sequence diagram.}
 		\label{fig:sequence-diagram}
+	\end{figure}
+
+	\item[Deployment diagrams] show networks of conneted nodes, their component instances and objects.
+	Nodes are drawn by boxes and may contain components, which are drawn as rectangles with two smaller rectancles on the left side.
+	Communication links (on the physical level) are drawn as solid lines connecting nodes, whereas communication dependencies are drawn with broken arrows.
+	Communication dependencies can define interfaces and contain class models.
+	Figure \ref{fig:deployment-diagram} is a deployment diagram of an example setup for online banking.
+	\begin{figure}[ht]
+		\centerline{\includegraphics[width=7cm]{img/uml-banking/deployment-diagram}}
+		\caption{Online banking infrastructure as a deployment diagram.}
+		\label{fig:deployment-diagram}
 	\end{figure}
 \end{description}
 
