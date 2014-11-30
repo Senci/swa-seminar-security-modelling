@@ -29,6 +29,9 @@
 %\acmArticleNum{XXX}
 %\acmdoi{10.1145/XXXXXXX.YYYYYYY}
 
+\newcommand{\specialcell}[2][l]{%
+\begin{tabular}[#1]{@{}l@{}}#2\end{tabular}}
+
 \acmVolume{28}
 \acmNumber{4}
 \acmYear{2009}
@@ -198,19 +201,75 @@ It describes architecture and behavior of software in a graphical manner using v
 		\caption{Online banking infrastructure as a deployment diagram.}
 		\label{fig:deployment-diagram}
 	\end{figure}
+
+	\item[Subsystems] ...
 \end{description}
 
 \section{Modeling secure software with UML}
+\label{sec:secure-software-with-uml}
+
+\newpage
+\subsection{UMLsec}
 \label{sec:umlsec}
 
-Citation goes like this... \cite{SHRB11}
-footnotes \footnote{this is a footnote.} are possible aswell.
 
-Reference to Section \ref{sec:requirements}.
+\begin{table*}[t]
+	\tabcolsep5pt
+	\tbl{UMLsec stereotypes as defined in \cite[Fig. 4.1]{Jür06}.}{%
+	\begin{tabular}{l|l|l|l|l}
+		Stereotype & Base Class & Tags & Constraints & Description \\ \hline
+		fair exchange & subsystem & start, stop, adversary & after start eventually reach stop & enforce fair exchange \\[0.1cm]
+		provable & subsystem & action, cert, adversary & action is non-deniable & non-repudiation requirement \\[0.1cm]
+		rbac & subsystem & protected, role, right & only permitted activities executed & enforces role-based access control \\[0.1cm]
+		Internet & link & & & Internet connection \\[0.1cm]
+		encrypted & link & & & encrypted connection \\[0.1cm]
+		LAN & link, node & & & LAN connection \\[0.1cm]
+		wire & link & & & wire \\[0.1cm]
+		smart card & node & & & smart card node \\[0.1cm]
+		POS device & node & & & POS device \\[0.1cm]
+		issuer node & node & & & issuer node \\[0.1cm]
+		secrecy & dependency & & & assumes secrecy \\[0.1cm]
+		integrity & dependency & & & assumes integrity \\[0.1cm]
+		high & dependency & & & high sensitivity \\[0.1cm]
+		critical & object, subsystem & integrity, authenticity, high, fresh & & \\[0.1cm]
+		secure links & subsystem & adversary & dependency security matched by links & enforces secure communication links \\[0.1cm]
+		secure dependency & subsystem & & <<call>>, <<send>> respect data security & structural interaction data security \\[0.1cm]
+		data security & subsystem & adversary, integrity, authenticity & freshness \\[0.1cm]
+		no down-flow & subsystem & & prevents down-flow & information flow condition \\[0.1cm]
+		no up-flow & subsystem & & prevents up-flow & information flow condition \\[0.1cm]
+		guarded access & subsystem & & guarded objects accessed through guards & access control using guard objects \\[0.1cm]
+		guarded & object & guard & & guarded object
+	\end{tabular}
+	}
+	\label{tbl:umlsec-stereotypes}
+\end{table*}
 
-blabla wichtig
-
-intentionally left blank.
+\begin{table}[ht]
+	\tbl{UMLsec tags as defined in \cite[Fig. 4.2]{Jür06}.}{%
+	\begin{tabular}{l|l|l|c|l}
+		Tag & Stereotype & Type & Mult. & Description \\ \hline
+		start & fair exchange & state  & * &  start states \\[0.1cm]
+		stop & fair exchange & state & * & stop states \\[0.1cm]
+		adversary & fair exchange & adversary model & 1 & adversary type \\[0.1cm]
+		action & provable & state & * & provable action \\[0.1cm]
+		cert & provable & expression & * & certificate \\[0.1cm]
+		adcersary & provable & adcersary model & * & adversary type \\[0.1cm]
+		protected & rbac & state  & * &  protected resources \\[0.1cm]
+		role & rbac & (actor, role)  & * &  assign role to actor \\[0.1cm]
+		right & rbac & (role, right)  & * &  assign right to role \\[0.1cm]
+		secrecy & critical & data  & * &   \\[0.1cm]
+		integrity & critical & \specialcell{(variable,\\expression)} & * & integrity of data \\[0.1cm]
+		authenticity & critical & (data, origin) & * & authenticity of data \\[0.1cm]
+		high & critical & message & * & high-level message \\[0.1cm]
+		fresh & critical & data & * & fresh data \\[0.1cm]
+		adversary & secure links & adversary model & 1 & adversary type \\[0.1cm]
+		adversary & data secutiry & adversary model & 1 & adversary type \\[0.1cm]
+		integrity & data secutiry & \specialcell{(variable,\\expression)} & * & authenticity of data \\[0.1cm]
+		guard & guarded & object name & 1 & guard object
+	\end{tabular}
+	}
+	\label{tbl:umlsec-tags}
+\end{table}
 
 \section{Conclusion}
 \label{sec:conclusion}
