@@ -202,13 +202,31 @@ It describes architecture and behavior of software in a graphical manner using v
 		\label{fig:deployment-diagram}
 	\end{figure}
 
-	\item[Subsystems] ...
+	\item[Subsystems] can be seen as special packages, grouping model elements which are representing a portion of a system.
+	They can be used to describe relations between the elements they contain.
+	Subsystems may have interfaces and connections to other subsystems.
+\end{description}
+
+The Unified Modeling Language offers some \textit{extensibility mechanisms}, an easy way to extend UML is by defining \textbf{stereotypes}, \textbf{tagged values} and \textbf{constraints}.
+%Although it is possible to extend the meta-model, we will not discuss this option here.
+
+\begin{description}
+	\item[Stereotypes] can be used to define new model elements based on already existing model elemets by extending them.
+	The notation for the use of stereotypes is defined by the symbol for the base element with a keyword above the name of the element.
+	The keyword of a stereotype is its name within matched guillemets.
+	Stereotypes could for example be used in a class diagram to classify method behaviour such as the <<constructor>> stereotype.
+
+	\item[Tagged values] are defined as selector-value pairs which may be attached to an element in order to augment it with further information.
+	The selector (or \textit{tag}) is a string and whereas the value can be of various types, it is encoded as string.
+	Tagged values are noted within curly brackets and an equal sign between tag and value, like \textit{\{ tag = value \}}.
+
+	\item[Constraints] are another possibility to enrich an element with further information.
+	They are defined as semantic conditions which have to be fulfilled by the elements they are attached to.
 \end{description}
 
 \section{Modeling secure software with UML}
 \label{sec:secure-software-with-uml}
 
-\newpage
 \subsection{UMLsec}
 \label{sec:umlsec}
 
